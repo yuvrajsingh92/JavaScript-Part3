@@ -60,6 +60,22 @@
 
 // abcd.call(obj)
 
+// ? Example of call
+
+// let student1 = {
+//   name: "Akshay",
+//   printName: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// let student2 = {
+//   name: "Deepika",
+// };
+
+// student1.printName();
+// student1.printName.call(student2);// ? This is how we can share the methods of another obj into another object
+
 // ? apply
 
 // let obj = {
