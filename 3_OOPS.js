@@ -48,7 +48,7 @@
 // ! class
 
 // class CreateUsers {
-//   constructor(name, email, age, gender, FavColor) {
+//   constructor(name, email, age, gender, FavColor) { // ? constructor is automatically invoked by new keyword
 //     this.name = name;
 //     this.email = email;
 //     this.age = age;
