@@ -89,7 +89,8 @@
 //   console.log(a, b, c, d);
 // }
 
-// data.apply(obj, [1, 2, 3, 4]);
+// data.apply(obj, [1, 2, 3, 4]); // ? apply is just like call it just take 2 argument and the 2 one is array 
+
 // let fnc = data.bind(obj, 1, 2, 3); //? bind is just like call but it don't run the function it return a another function
 
-// fnc();
+fnc();
