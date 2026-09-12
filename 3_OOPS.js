@@ -233,6 +233,95 @@
 // let dog = new Dog("BullDog", "American");
 // dog.makeSound(); // ? This is Animal function and can be access by dog class
 
+// ! Their are types of inheritance
+
+// 1) single inheritance: One child class inheriting from one parent class. The above is the example of it
+
+// ! 2) multilevel inheritance: Inheritance happens in multiple level
+
+// class Animal {
+//   eat() {
+//     console.log("Eating");
+//   }
+// }
+
+// class Dog extends Animal {
+//   bark() {
+//     console.log("Woof!!");
+//   }
+// }
+
+// class Puppy extends Dog {
+//   play() {
+//     console.log("Playing...");
+//   }
+// }
+
+// let puppy = new Puppy();
+// puppy.bark();
+// puppy.eat();
+// puppy.play();
+
+// ! 3) Hierarchical inheritance:Multiple child classes inherit from the same parent.
+
+// class Animal {
+//   eat() {
+//     console.log("Eating..");
+//   }
+// }
+
+// class Dog extends Animal {
+//   bark() {
+//     console.log("Wofff!!");
+//   }
+// }
+
+// class Cat extends Animal {
+//   meow() {
+//     console.log("Meow!");
+//   }
+// }
+
+// let dog = new Dog();
+// let cat = new Cat();
+
+// cat.eat();
+// dog.eat();
+
+// cat.meow();
+// dog.bark();
+
+// ! 4) Multiple inheritance: One Class Inheriting from multiple parents
+
+// ! Note:In javascript does not support multiple inheritance direclty by class but we can achive similar behavoir using mixins
+
+// let CanRun = {
+//   run() {
+//     console.log("Running...");
+//   },
+// };
+
+// let CanSwim = {
+//   swim() {
+//     console.log("Swimming...");
+//   },
+// };
+
+// class Person {
+//   walk() {
+//     console.log("Walking...");
+//   }
+// }
+
+// Object.assign(Person.prototype, CanRun, CanSwim);
+
+// let person = new Person();
+// person.walk();
+// person.run();
+// person.swim();
+
+
+
 // ! 3) Abstraction:Abstraction means hiding complicated internal details and showing only the things the user need to use
 
 // class Car {
