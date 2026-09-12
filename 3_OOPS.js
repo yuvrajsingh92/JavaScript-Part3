@@ -1,5 +1,50 @@
 // ! What is oops: Oops stand for object oriented programming. It's is used for creating real world concepts into program
 
+// ! Object-Oriented Programming (OOP) is a programming approach where we organize code around objects that contain data (properties) and behavior (methods)
+
+// ? Why do we need oop: Imaging you have 100 cars without oop we have to create alot of object for every car and same line of code will be repeated and with oops we just have to create a template and then using that template we can create instance or objects with it
+
+// const car1 = {
+//   brand: "BMW",
+//   color: "Black",
+// };
+
+// const car2 = {
+//   brand: "Audi",
+//   color: "White",
+// };
+
+// const car3 = {
+//   brand: "Tesla",
+//   color: "Red",
+// };
+
+// instead of this we can create template or blueprint for this same
+
+// class Cars {
+//   constructor(brand, color) {
+//     this.brand = brand;
+//     this.color = color;
+//     this.speed = 0;
+//   }
+//   acceleration() {
+//     this.speed += 10;
+//     console.log(`${this.brand} is going at ${this.speed} km/h`);
+//   }
+//   stop() {
+//     this.speed = 0;
+//     console.log("Car stopped");
+//   }
+// }
+
+// let car1 = new Cars("BMW", "Green");
+// car1.acceleration();
+// car1.acceleration();
+// car1.acceleration();
+// car1.acceleration();
+// car1.acceleration();
+// car1.stop();
+
 // function CollectData(name, email, age, gender) {
 //   this.name = name;
 //   this.email = email;
@@ -135,3 +180,104 @@
 // console.log(caremalCoffee);
 // caremalCoffee.taste = "Sweet"
 // caremalCoffee.drink();
+
+// ! In object oriented programming their are main 4 pillars of oops concepts and javascript supports every pillar
+
+// ! 1) Encapsulation: Encapsulation is process of restricts the direct access to data and methods
+
+// class BankAccount {
+//   #balance = 0; // ?private property can't be access outside of class
+//   constructor(owner) {
+//     this.owner = owner;
+//   }
+//   depoit(amount) {
+//     if (amount <= 0) {
+//       console.log(
+//         `Amount Can't be 0 or less then 0 and your amount is ${amount}`,
+//       );
+//     } else {
+//       this.#balance += amount;
+//     }
+//   }
+//   getBalance() {
+//     return this.#balance;
+//   }
+// }
+
+// let user1 = new BankAccount("Ayush Singh");
+// user1.depoit(1000);
+// user1.depoit(1);
+// console.log(user1.getBalance());
+
+// ! 2) Inheritance: Inheritance allow a new class to reuse the property and methods of an existing class by using extend keyword
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   makeSound() {
+//     console.log(`${this.name} can make sound`);
+//   }
+// }
+
+// class Dog extends Animal {
+//   constructor(name, bread) {
+//     super(name);
+//     this.bread = bread;
+//   }
+//   bark() {
+//     console.log(`${this.name} can bark Woof Woof!!`);
+//   }
+// }
+
+// let dog = new Dog("BullDog", "American");
+// dog.makeSound(); // ? This is Animal function and can be access by dog class
+
+// ! 3) Abstraction:Abstraction means hiding complicated internal details and showing only the things the user need to use
+
+// class Car {
+//   start() {
+//     this.#checkEngine();
+//     this.#startEngine();
+
+//     console.log("Car Started");
+//   }
+//   #checkEngine() {
+//     console.log("Checking Engine....");
+//   }
+//   #startEngine() {
+//     console.log("Starting Engine....");
+//   }
+// }
+
+// let car = new Car();
+// car.start();
+
+// ! 4) Polymorphism:Polymorphism means the same methods interface can behave diffrently depending on the object using it
+
+// class Animal {
+//   makeSound() {
+//     console.log("Animal Makes sound:");
+//   }
+// }
+
+// class Dog extends Animal {
+//   makeSound() {
+//     console.log("Dog says Woof!!");
+//   }
+// }
+
+// class Cat extends Animal {
+//   makeSound() {
+//     console.log("Cat says Meow!!");
+//   }
+// }
+
+// let dog = new Dog();
+// dog.makeSound(); // ? Dog says Woof!!
+
+// let cat = new Cat();
+// cat.makeSound(); // ? Cat says Meow!!
+
+// let animal = new Animal();
+// animal.makeSound(); // ? Animal Makes sound:
